@@ -10,7 +10,8 @@ defmodule Odo.Mixfile do
      package: package(),
      description: description(),
      deps: deps(),
-     dialyzer: [ flags: ["-Wunmatched_returns", :error_handling, :underspecs, :unknown]]
+     dialyzer: [ flags: ["-Wunmatched_returns", :error_handling, :underspecs, :unknown]],
+     source_url: "https://github.com/nigelsmith/odo"
      ]
   end
 
@@ -45,8 +46,7 @@ defmodule Odo.Mixfile do
   defp description do
     """
     Odo is a simple GenServer based token bucket which can be used for communicating with remote APIs.  It lets you know
-    when it's safe to proceed, given a particular rate limit, and enables you to account for latency between your machine
-    and the remote server.
+    when it's safe to proceed, given a particular rate limit.
     """
   end
 
