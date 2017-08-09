@@ -33,7 +33,7 @@ status = Odo.Bucket.get_token("my bucket")
 ```
 
 The status return value will be one of the following forms.  When it's ok to proceed with your request you will receive
-`{:ok, tokens_remaining, until}` with `until` being the time in milliseconds until he next tick or refill occurs.
+`{:go, tokens_remaining, until}` with `until` being the time in milliseconds until he next tick or refill occurs.
 
 When the bucket is full the reply will be `{:stop, until}`, again with `until` measured in milliseconds letting you know
 when the next window of opportunity to make a request will open up.
